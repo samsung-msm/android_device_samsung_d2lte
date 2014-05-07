@@ -1,38 +1,53 @@
 # Bins
 bin/mpdecision
-
-# Thermal
+bin/radish
 bin/thermald
+bin/time_daemon
 
 # Bluetooth firmware
-bin/bcm4334.hcd
-bin/bcm4334_murata.hcd
-bin/bcm4334_semco.hcd
+vendor/firmware/bcm4334.hcd
+vendor/firmware/bcm4334_murata.hcd
+vendor/firmware/bcm4334_semco.hcd
+
+# GPS
+-app/com.qualcomm.location.apk
+bin/gsiff_daemon
+etc/permissions/com.qualcomm.location.xml
+lib/libloc_api_v02.so
+vendor/lib/libgeofence.so
+vendor/lib/libizat_core.so
+vendor/lib/liblbs_core.so
+vendor/lib/liblocationservice.so
 
 # Audio
 lib/libacdbloader.so
 lib/libaudcal.so
+lib/libcsd-client.so
 
 # mmparser extended
 lib/libExtendedExtractor.so
 lib/libmmparser.so
 lib/libmmosal.so
 lib/libdivxdrm.so
+lib/livDivxDrm.so
 
-# Adreno GPU (Available on Nexus 4)
-lib/egl/eglsubAndroid.so
-lib/egl/libEGL_adreno200.so
-lib/egl/libGLESv1_CM_adreno200.so
-lib/egl/libGLESv2_adreno200.so
-lib/egl/libq3dtools_adreno200.so
-lib/egl/libGLESv2S3D_adreno200.so
-lib/libc2d2_z180.so
-lib/libCB.so
-lib/libgsl.so
-lib/libC2D2.so
-lib/libOpenVG.so
-lib/libOpenCL.so
-lib/libsc-a2xx.so
+# Adreno GPU
+vendor/lib/egl/eglsubAndroid.so
+vendor/lib/egl/libEGL_adreno.so
+vendor/lib/egl/libGLESv1_CM_adreno.so
+vendor/lib/egl/libGLESv2_adreno.so
+vendor/lib/egl/libq3dtools_adreno.so
+vendor/lib/egl/libGLESv2S3D_adreno.so
+vendor/lib/libadreno_utils.so
+vendor/lib/libC2D2.so
+vendor/lib/libc2d2_z180.so
+vendor/lib/libc2d2_a3xx.so
+vendor/lib/libCB.so
+vendor/lib/libgsl.so
+vendor/lib/libOpenVG.so
+vendor/lib/libOpenCL.so
+vendor/lib/libsc-a2xx.so
+vendor/lib/libsc-a3xx.so
 lib/libwvm.so
 etc/firmware/a225p5_pm4.fw
 etc/firmware/a225_pfp.fw
@@ -82,13 +97,13 @@ blobs/vzw/lib/libril.so
 blobs/gsm/lib/libril-qc-qmi-1.so
 blobs/gsm/lib/libril.so
 
-# GPS
-lib/libgeofence.so
-lib/libloc_api_v02.so
-
 # NFC
 lib/hw/nfc.MSM8960.so
 #vendor/firmware/libpn544_fw.so
+
+# Time services
+bin/time_daemon
+-vendor/lib/libtime_genoff.so
 
 # Sensors
 lib/hw/sensors.msm8960.so
@@ -110,7 +125,6 @@ lib/libsecnativefeature.so
 lib/libgemini.so
 lib/liboemcamera.so
 lib/libmmmpod.so
-lib/libmmstereo.so
 lib/libmmcamera_faceproc.so
 lib/libmmcamera_frameproc.so
 lib/libmmcamera_statsproc30.so
@@ -139,7 +153,7 @@ cameradata/datapattern_420sp.yuv
 cameradata/datapattern_front_420sp.yuv
 
 # General
-lib/libdiag.so
+vendor/lib/libdiag.so
 
 # Wi-Fi
 etc/wifi/bcmdhd_apsta.bin_b2
