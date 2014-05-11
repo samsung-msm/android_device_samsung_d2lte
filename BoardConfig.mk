@@ -88,10 +88,10 @@ BOARD_USES_QC_TIME_SERVICES := true
 BOARD_HAVE_NEW_QCOM_CSDCLIENT := true
 
 # The "new" GPS is really the old GPS, override it.
-BOARD_HAVE_NEW_QC_GPS :=
+#BOARD_HAVE_NEW_QC_GPS :=
 
 # We don't use old-ass RPC
-TARGET_NO_RPC := true
+#TARGET_NO_RPC := true
 
 #camera abi compatiblily
 COMMON_GLOBAL_CFLAGS += -DQCOM_BSP_CAMERA_ABI_HACK
